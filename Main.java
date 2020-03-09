@@ -59,7 +59,8 @@ public class Main extends Canvas implements Runnable{
                 "institute_code=" + institutionCode + "&userName=" + userName + "&password=" + password + miscStuff,
                 serverName,
                 "-H",
-                contentDescriptor
+                contentDescriptor,
+                "--ssl-no-revoke"
 
         };
 
@@ -96,7 +97,8 @@ public class Main extends Canvas implements Runnable{
                 "-s",
                 "-H",
                 "Authorization: Bearer " + bearerCode,
-                "https://klik035228001.e-kreta.hu/mapi/api/v1/Student?fromDate=" + fromDate + "&toDate=" + toDate
+                "https://klik035228001.e-kreta.hu/mapi/api/v1/Student?fromDate=" + fromDate + "&toDate=" + toDate,
+                "--ssl-no-revoke"
         };
         ProcessBuilder pb = new ProcessBuilder(getGrades);
         pb.redirectErrorStream(true);
@@ -129,7 +131,8 @@ public class Main extends Canvas implements Runnable{
                 "-H",
                 "Authorization: Bearer " + bearerCode,
                 "Content-Type: application/json; charset=utf-8",
-                "https://klik035228001.e-kreta.hu/mapi/api/v1/Lesson?fromDate=" + fromDate + "&toDate=" + toDate
+                "https://klik035228001.e-kreta.hu/mapi/api/v1/Lesson?fromDate=" + fromDate + "&toDate=" + toDate,
+                "--ssl-no-revoke"
 
         };
 
