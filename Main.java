@@ -1,3 +1,8 @@
+/**
+ * @author Kyjko 
+ * @version 0.1 
+*/
+
 package main.kyjko.zsirkreta;
 
 import java.awt.*;
@@ -417,7 +422,7 @@ public class Main extends Canvas implements Runnable{
 
         } else {
 
-            //not authenticated yet, render particles
+            //not authenticated yet, also render particles
             g.setColor(Color.WHITE);
             g.setFont(new Font("Sans Serif", Font.PLAIN, 40));
             g.drawString("Bejelentkezés...", WIDTH / 4, HEIGHT / 2);
@@ -433,7 +438,7 @@ public class Main extends Canvas implements Runnable{
             g.drawString("Hibás felhasználónév vagy jelszó!", WIDTH / 4, HEIGHT / 3 * 2);
         }
 
-        //System.out.println(isAuthed + " - " + failedAuth);
+        //particle colors will change red upon failed authentication
 
         g.dispose();
         bs.show();
